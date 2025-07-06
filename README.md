@@ -1,0 +1,1 @@
+# Design-and-Implementation-of-a-Majority-and-Uniformity-Detector-Using-Verilog-on-FPGA
