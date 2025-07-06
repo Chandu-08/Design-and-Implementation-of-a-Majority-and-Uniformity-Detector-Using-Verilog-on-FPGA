@@ -1,0 +1,20 @@
+module majority_uniformity_detector (
+    input A,
+    input B,
+    input C,
+    input D,
+    output Y1,
+    output Y2
+);
+
+    // Count number of high inputs
+    wire [2:0] sum;
+    assign sum = A + B + C + D;
+
+    // Y1 = 1 if majority (sum >= 3)
+    assign Y1 = (sum >= 3) ? 1'b1 : 1'b0;
+
+    // Y2 = 1 if all inputs are 0 or all are 1
+    assign Y2 = ((A == B) && (B == C) && (C == D)) ? 1'b1 : 1'b0;
+
+endmodule
